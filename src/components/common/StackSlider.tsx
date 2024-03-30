@@ -25,7 +25,9 @@ const StackSlider = ({ sliderList }: any) => {
 				const intervalId = setTimeout(() => {
 					card.setAttribute(
 						"data-position",
-						currPosition === 1 ? "5" : newPosition.toString()
+						currPosition === 1
+							? sliderList.length
+							: newPosition.toString()
 					);
 				}, 150);
 
