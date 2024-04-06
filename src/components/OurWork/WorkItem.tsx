@@ -14,14 +14,14 @@ const WorkItem = ({
 			className={`max-w-[390px] mx-auto mb-[32px] md:mb-0 md:mx-0 md:max-w-[640px] md:max-h-[620px] px-0 md:p-[24px] lg:p-[40px] transition-all duration-300 ease-in-out relative w-full md:w-1/2 ${
 				className ? className : ""
 			}`}>
-			<div className="relative pt-[58.2%] rounded-[12px] overflow-hidden mb-[16px]">
+			<div className="relative pt-[58.2%] rounded-[12px] overflow-hidden imgloader z-0 imgloader">
 				<ImageLoader
 					src={featImage}
 					fill
 					alt={title}
 				/>
 			</div>
-			<div className="flex items-center justify-between">
+			<div className="flex items-center justify-between mt-[16px]">
 				<div className="flex flex-col">
 					<h4 className="text-[24px] leading-[28px] font-[500] lg:leading-[36px] text-[#E6E6E6] mb-[10px]">
 						{title}

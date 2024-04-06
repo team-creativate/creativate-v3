@@ -37,7 +37,7 @@ const ClientDetCard = ({ type, title }: any) => {
 const WorkDetailsBanner = ({ title, bannerImage, clientDetails }: any) => {
 	return (
 		<div className="relative block md:h-[466px]">
-			<div className="relative pt-[36.2%] min-h-[140px] max-w-[600px] mx-auto md:min-h-auto md:max-w-full rounded-[16px] md:absolute md:h-full md:inset-0 md:w-full md:rounded-[24px] overflow-hidden">
+			<div className="relative pt-[36.2%] min-h-[140px] max-w-[600px] mx-auto md:min-h-auto md:max-w-full rounded-[16px] md:absolute md:h-full md:inset-0 md:w-full md:rounded-[24px] overflow-hidden imgloader z-0">
 				<ImageLoader
 					src={bannerImage}
 					alt={title}

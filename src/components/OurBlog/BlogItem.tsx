@@ -9,8 +9,9 @@ const BlogItem = ({ featImage, title, blogLink, className }: any) => {
 			}`}>
 			<div className="opacity-100 hover:opacity-50 transition-all duration-300 ease-in-out cursor-pointer">
 				<Link
-					href={`/our-blog/${blogLink}`}>
-					<div className="relative pt-[58.2%] rounded-[12px] overflow-hidden mb-[16px]">
+					href={`/our-blog/${blogLink}`}
+					className="relative block imgloader rounded-[12px] overflow-hidden z-[0]">
+					<div className="relative pt-[58.2%]">
 						<ImageLoader
 							src={featImage}
 							fill
@@ -20,7 +21,7 @@ const BlogItem = ({ featImage, title, blogLink, className }: any) => {
 				</Link>
 				<Link
 					href={`/our-blog/${blogLink}`}
-					className="text-[24px] leading-[28px] font-[500] lg:leading-[36px] text-[#E6E6E6] mb-[10px]">
+					className="block mt-[16px] text-[24px] leading-[28px] font-[500] lg:leading-[36px] text-[#E6E6E6] mb-[10px]">
 					{title}
 				</Link>
 			</div>
