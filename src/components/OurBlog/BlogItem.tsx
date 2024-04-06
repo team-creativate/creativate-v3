@@ -9,7 +9,7 @@ const BlogItem = ({ featImage, title, blogLink, className }: any) => {
 			}`}>
 			<div className="opacity-100 hover:opacity-50 transition-all duration-300 ease-in-out cursor-pointer">
 				<Link
-					href={`${process.env.NEXT_PUBLIC_HOST_URI}/our-blog/${blogLink}`}>
+					href={`/our-blog/${blogLink}`}>
 					<div className="relative pt-[58.2%] rounded-[12px] overflow-hidden mb-[16px]">
 						<ImageLoader
 							src={featImage}
@@ -19,7 +19,7 @@ const BlogItem = ({ featImage, title, blogLink, className }: any) => {
 					</div>
 				</Link>
 				<Link
-					href={`${process.env.NEXT_PUBLIC_HOST_URI}/our-blog/${blogLink}`}
+					href={`/our-blog/${blogLink}`}
 					className="text-[24px] leading-[28px] font-[500] lg:leading-[36px] text-[#E6E6E6] mb-[10px]">
 					{title}
 				</Link>

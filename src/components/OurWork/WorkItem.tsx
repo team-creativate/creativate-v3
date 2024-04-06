@@ -38,7 +38,7 @@ const WorkItem = ({
 					)}
 				</div>
 				<Link
-					href={`${process.env.NEXT_PUBLIC_HOST_URI}/our-work/${blogLink}`}
+					href={`/our-work/${blogLink}`}
 					className="w-[46px] h-[46px] lg:w-[54px] lg:h-[54px] flex items-center justify-center shrink-0 bg-[#191B35] hover:bg-[#0067FF] transition-all duration-300 ease-in-out rounded-[8px]">
 					<ImageLoader
 						src={"/icons/external-link.svg"}
