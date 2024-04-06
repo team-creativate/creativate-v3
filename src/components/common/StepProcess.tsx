@@ -35,7 +35,7 @@ const StepProcess = ({ data, sectionId }: any) => {
 					className ? className : ""
 				}`}>
 				<span
-					className={`absolute w-full h-[20px] top-0 right-0 left-0 ${
+					className={`absolute w-full h-[15px] top-0 right-0 left-0 ${
 						bgGradient ? bgGradient : ""
 					}`}
 				/>
@@ -67,19 +67,10 @@ const StepProcess = ({ data, sectionId }: any) => {
 						animation={"translateFromBottom"}
 						delay={0.2}>
 						<SectionTitle
-							className={`text-primaryLight !text-center lg:mb-[30px] 2xl:mb-[40px]`}>
+							className={`text-primaryLight !text-center mb-[30px] 2xl:mb-[40px]`}>
 							{data?.title}
 						</SectionTitle>
 					</AnimateInView>
-					{/* <AnimateInView
-						reset={false}
-						animation={"translateFromBottom"}
-						delay={0.4}>
-						<p
-							className={`text-primaryLight font-normal text-[16px] leading-[20px] lg:text-[20px] lg:leading-[24px] text-center opacity-50 my-[16px] lg:my-[25px] 2xl:my-[40px] w-full lg:hidden`}>
-							{data?.description}
-						</p>
-					</AnimateInView> */}
 				</div>
 				{Object.values(processItems)?.length > 0 && (
 					<div

@@ -72,7 +72,7 @@ const FaqList: React.FC<faqProps> = ({ title, desc, faqList, className }) => {
 									(answerRef.current[index] = element)
 								}>
 								<p
-									className={`text-primaryLight font-normal text-[16px] leading-[20px] lg:text-[18px] lg:leading-[24px] w-full md:w-[88%] mr-auto ml-0`}
+									className={`text-primaryLight font-normal text-[16px] leading-[20px] lg:text-[18px] lg:leading-[24px] w-full md:w-[88%] mr-auto ml-0 opacity-50`}
 									dangerouslySetInnerHTML={{
 										__html: item.answer,
 									}}

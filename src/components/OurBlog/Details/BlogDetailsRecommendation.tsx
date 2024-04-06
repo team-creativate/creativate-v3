@@ -1,0 +1,38 @@
+import React from "react";
+import BlogItem from "../BlogItem";
+import Link from "next/link";
+
+const BlogDetailsRecommendation = ({ sectionTitle, data }: any) => {
+	return (
+		<div className="pt-[32px] md:pt-[40px]">
+			<h3 className="text-[32px] leading-[38px] font-[500] text-center text-[#F4F4F4] mb-[32px] lg:mb-[40px] lg:text-[40px] lg:leading-[48px]">
+				{sectionTitle}
+			</h3>
+			<div className="md:flex md:items-center md:justify-start md:flex-wrap">
+				{data?.map((item: any, index: number) => {
+					return (
+						<React.Fragment key={index}>
+							<BlogItem
+								featImage={item?.acf?.featured_image}
+								blogLink={item?.acf?.current_blog_url}
+								title={item?.title?.rendered}
+								className={``}
+							/>
+						</React.Fragment>
+					);
+				})}
+			</div>
+			<div className="relative block text-center">
+				<Link
+					href={`/our-blog`}
+					className="bg-[#fff] rounded-[8px] py-[16px] px-[32px] block sm:inline-block mt-[30px] md:mt-[40px] opacity-100 hover:opacity-60 transition-all duration-300 ease-in-out">
+					<span className="text-[24px] leading-[30px] font-[400] text-[#0067FF]">
+						View all blogs
+					</span>
+				</Link>
+			</div>
+		</div>
+	);
+};
+
+export default BlogDetailsRecommendation;

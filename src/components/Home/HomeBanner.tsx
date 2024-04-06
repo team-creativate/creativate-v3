@@ -9,16 +9,18 @@ const HomeBanner = ({ data, logoSlider }: { data: any; logoSlider: any }) => {
 		<section
 			className={`pb-[50px] pt-[110px] md:pb-[60px] md:pt-[100px] xl:pt-[190px] xl:pb-[130px] bg-primaryDark`}>
 			<SectionLayout
-				className={`flex items-center 2xl:items-end flex-col lg:flex-row justify-between`}>
+				className={`flex items-center flex-col lg:flex-row justify-between`}>
 				<div className="w-full max-w-[600px] lg:w-[60%] lg:pr-[20px] max-lg:mb-[40px]">
-					<AnimateInView
-						reset={false}
-						animation={"translateFromBottom"}
-						className={`w-full mx-auto mb-[30px]`}>
-						<p className="titleFont text-[16px] max-lg:text-center leading-[20px] md:text-[20px] md:leading-[24px] font-[400] text-transparent bg-[linear-gradient(90deg,_#0FC7BF_0%,_#2B66DE_100%)] bg-clip-text mb-[8px] md:mb-[14px] 2xl:mb-[18px]">
-							{data?.key_phrase}
-						</p>
-					</AnimateInView>
+					{data?.key_phrase && (
+						<AnimateInView
+							reset={false}
+							animation={"translateFromBottom"}
+							className={`w-full mx-auto mb-[30px]`}>
+							<p className="titleFont text-[16px] max-lg:text-center leading-[20px] md:text-[20px] md:leading-[24px] font-[400] text-transparent bg-[linear-gradient(90deg,_#0FC7BF_0%,_#2B66DE_100%)] bg-clip-text mb-[8px] md:mb-[14px] 2xl:mb-[18px]">
+								{data?.key_phrase}
+							</p>
+						</AnimateInView>
+					)}
 					<AnimateInView
 						reset={false}
 						animation={"translateFromBottom"}
@@ -46,13 +48,13 @@ const HomeBanner = ({ data, logoSlider }: { data: any; logoSlider: any }) => {
 						</Link>
 					</AnimateInView>
 					<div className="h-[46px] relative mb-[40px] lg:mb-0">
-						<span className="h-[45px] w-[50px] absolute left-0 top-0 blur-lg z-[1] logoSliderShade left" />
+						<span className="h-[45px] w-[50px] absolute left-[-18px] top-0 blur-lg z-[1] logoSliderShade left" />
 						<LogoSlider
 							desktopView={4}
 							mobileView={2}
 							logoSlider={logoSlider}
 						/>
-						<span className="h-[45px] w-[50px] absolute right-0 top-0 blur-lg z-[1] logoSliderShade right" />
+						<span className="h-[45px] w-[50px] absolute right-[-18px] top-0 blur-lg z-[1] logoSliderShade right" />
 						<span />
 					</div>
 				</div>

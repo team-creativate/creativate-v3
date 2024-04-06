@@ -149,7 +149,7 @@ const Footer = async () => {
 					height={240}
 				/>
 				<ImageLoader
-					src="./images/footer-logo-bg.svg"
+					src="/images/footer-logo-bg.svg"
 					fill
 					alt="logo"
 					className="z-[2]"
@@ -165,7 +165,7 @@ const Footer = async () => {
 					{data?.footer_bottom_menu?.map((item: any, index: any) => (
 						<Link
 							key={index}
-							href={`${item?.target_id}`}
+							href={`/${item?.target_id}`}
 							target="_blank"
 							className="text-[16px] leading-[20px] text-primaryLight font-[400]">
 							{item?.menu_label}

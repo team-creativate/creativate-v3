@@ -7,14 +7,14 @@ import "slick-carousel/slick/slick-theme.css";
 
 const LogoSlider = ({ desktopView, mobileView, logoSlider }: any) => {
 	const settings = {
-		dots: true,
+		dots: false,
 		arrows: false,
 		infinite: true,
 		slidesToShow: desktopView,
 		slidesToScroll: 1,
 		autoplay: true,
-		speed: 2000,
-		autoplaySpeed: 3000,
+		speed: 3000,
+		autoplaySpeed: 0,
 		cssEase: "linear",
 		responsive: [
 			{

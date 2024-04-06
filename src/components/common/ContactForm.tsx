@@ -16,7 +16,7 @@ const ContactForm = ({
 			<div
 				className={`p-[52px_16px_32px] md:p-[57px_40px_75px] bg-[#191B35] rounded-[8px] overflow-hidden relative`}>
 				<span
-					className={`absolute w-full h-[20px] top-0 right-0 left-0 bg-[linear-gradient(91.94deg,_#F98DD3_0%,_#EDD453_100%)]`}
+					className={`absolute w-full h-[15px] top-0 right-0 left-0 bg-[linear-gradient(91.94deg,_#F98DD3_0%,_#EDD453_100%)]`}
 				/>
 				<h4
 					className={`text-[32px] leading-[40px] font-[400] text-primaryLight text-center lg:text-[40px] lg:leading-[48px] mb-[16px] lg:mb-[40px]`}>

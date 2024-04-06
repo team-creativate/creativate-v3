@@ -1,0 +1,92 @@
+import BlogDetailsBanner from "@/components/OurBlog/Details/BlogDetailsBanner";
+import BlogDetailsRecommendation from "@/components/OurBlog/Details/BlogDetailsRecommendation";
+import SectionLayout from "@/templates/SectionLayout";
+import { Metadata } from "next";
+
+export async function generateStaticParams() {
+	const res = await fetch(
+		`${process.env.NEXT_PUBLIC_CREATIVATE_URI}/our-blog?acf_format=standard`,
+		{ next: { revalidate: 60 } }
+	);
+	const data = await res.json();
+
+	return data.map((blog: any) => ({
+		slug: blog.slug,
+	}));
+}
+
+async function getData(params: string) {
+	const res = await fetch(
+		`${process.env.NEXT_PUBLIC_CREATIVATE_URI}/our-blog/?slug=${params}&acf_format=standard`,
+		{ next: { revalidate: 60 } }
+	);
+
+	if (!res.ok) {
+		throw new Error("Failed to fetch data");
+	}
+
+	return res.json();
+}
+
+async function getBlogData() {
+	const res = await fetch(
+		`${process.env.NEXT_PUBLIC_CREATIVATE_URI}/our-blog?acf_format=standard&_fields=id,slug,title,excerpt,acf`,
+		{ next: { revalidate: 60 } }
+	);
+
+	if (!res.ok) {
+		throw new Error("Failed to fetch data");
+	}
+
+	return res.json();
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+	const pageData = await fetch(
+		`${process.env.NEXT_PUBLIC_CREATIVATE_URI}/pages?slug=home&acf_format=standard`,
+		{ next: { revalidate: 60 } }
+	).then((res) => res.json());
+
+	return {
+		title: pageData[0]?.acf?.metadata?.title ?? "Creativate",
+		description:
+			pageData[0]?.acf?.metadata?.description ??
+			"Creativity and innonvation for Unstoppable Growth.",
+	};
+}
+
+const BlogDetails = async ({ params }: { params: { slug: string } }) => {
+	const pageData = await getData(params.slug);
+	const data = pageData[0];
+
+	const allBlog = await getBlogData();
+	const filteredPosts = allBlog
+		.filter((post: any) => data?.acf.other_blogs.includes(post.id))
+		.slice(0, 2);
+
+	return (
+		<div className="pt-[106px] pb-[20px] md:pt-[160px] md:pb-[100px] bg-primaryDark">
+			<SectionLayout>
+				<BlogDetailsBanner
+					title={data?.title?.rendered}
+					bannerImage={data?.acf?.banner_image}
+					clientDetails={data?.acf.about_client}
+				/>
+				{data?.content?.rendered && (
+					<div
+						className="blog-details mt-[64px] md:mt-[80px] max-w-[1000px] mx-auto"
+						dangerouslySetInnerHTML={{
+							__html: data?.content?.rendered,
+						}}
+					/>
+				)}
+				<BlogDetailsRecommendation
+					sectionTitle={"Other Blogs"}
+					data={filteredPosts}
+				/>
+			</SectionLayout>
+		</div>
+	);
+};
+
+export default BlogDetails;

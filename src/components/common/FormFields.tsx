@@ -67,7 +67,7 @@ const FormFields = () => {
 
 	if (state.succeeded) {
 		return (
-			<p className="p-[20px_15px] rounded-[6px] bg-green-400 text-primaryDark text-[20px] leading-[24px] font-bold text-center block mt-[40px]">
+			<p className="p-[20px_15px] rounded-[6px] bg-primaryBlue text-primaryDark text-[20px] leading-[24px] font-bold text-center block mt-[40px]">
 				Our team will contact you soon.
 			</p>
 		);

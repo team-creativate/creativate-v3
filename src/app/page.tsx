@@ -14,9 +14,9 @@ export async function generateMetadata(): Promise<Metadata> {
 	).then((res) => res.json());
 
 	return {
-		title: pageData[0]?.acf?.meta_data?.title ?? "Creativate",
+		title: pageData[0]?.acf?.metadata?.title ?? "Creativate",
 		description:
-			pageData[0]?.acf?.meta_data?.title.description ??
+			pageData[0]?.acf?.metadata?.description ??
 			"Creativity and innonvation for Unstoppable Growth.",
 	};
 }
