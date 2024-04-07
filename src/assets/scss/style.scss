@@ -229,6 +229,15 @@ header nav a {
 	.wp-block-columns-is-layout-flex {
 		display: flex;
 	}
+	a {
+		color: #0067FF;
+		text-decoration: underline;
+		font-weight: 400;
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			font-weight: 500;
+		}
+	}
 	p:last-child {
 		margin-bottom: 0;
 	}

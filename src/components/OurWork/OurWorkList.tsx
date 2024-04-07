@@ -5,7 +5,7 @@ import WorkItem from "./WorkItem";
 const OurWorkList = ({ data }: any) => {
 	return (
 		<SectionLayout>
-			<div className="md:flex md:justify-start md:flex-wrap py-[32px] md:pt-[60px] md:pb-[100px]">
+			<div className="workitem-wrap md:flex md:justify-start md:flex-wrap py-[32px] md:pt-[60px] md:pb-[100px]">
 				{data?.map((item: any, index: number) => {
 					return (
 						<React.Fragment key={index}>

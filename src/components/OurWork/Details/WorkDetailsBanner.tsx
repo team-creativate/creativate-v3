@@ -23,11 +23,12 @@ const ClientDetCard = ({ type, title }: any) => {
 			head = "Service";
 	}
 	return (
-		<div className="bg-[rgba(25,_27,_53,_0.7)] px-[24px] py-[12px] w-auto md:px-[30px] md:py-[20px] md:max-w-[calc(50%_-_12px)] md:w-full xl:max-w-1/4 xl:w-auto mx-auto md:mx-0 rounded-[8px] text-[#F4F4F4] inline-flex md:flex md:flex-col text-center md:text-left">
-			<h5 className="text-[16px] leading-[24px] font-[600] md:text-[18px] md:leading-[24px] md:mb-[10px] mr-[8px] md:mr-0">
+		<div className="relative px-[24px] py-[12px] w-auto md:px-[30px] md:py-[20px] md:max-w-[calc(50%_-_12px)] md:w-full xl:max-w-1/4 xl:w-auto mx-auto md:mx-0 rounded-[8px] text-[#F4F4F4] inline-flex md:flex md:flex-col text-center md:text-left overflow-hidden">
+			<span className="bg-[rgba(25,_27,_53,_0.5)] absolute inset-0 w-full h-full z-0 backdrop-blur-[8px]" />
+			<h5 className="text-[16px] leading-[24px] font-[600] md:text-[18px] md:leading-[24px] md:mb-[10px] mr-[8px] md:mr-0 z-[1]">
 				{head}
 			</h5>
-			<p className="text-[18px] leading-[22px] font-[400] md:text-[20px] md:leading-[26px]">
+			<p className="text-[18px] leading-[22px] font-[400] md:text-[20px] md:leading-[26px] z-[1]">
 				{title}
 			</p>
 		</div>
