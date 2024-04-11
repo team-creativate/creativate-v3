@@ -18,6 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
 		description:
 			pageData[0]?.acf?.metadata?.description ??
 			"Creativity and innonvation for Unstoppable Growth.",
+		keywords: pageData[0]?.acf?.metadata?.keywords ?? "Creativity",
 	};
 }
 

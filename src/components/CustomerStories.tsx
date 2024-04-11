@@ -133,7 +133,7 @@ const CustomerStories = ({ data, sectionId, logoSlider }: any) => {
 				</Slider>
 				<div className="h-[46px] relative mt-[40px]">
 					<LogoSlider
-						desktopView={5}
+						desktopView={7}
 						mobileView={2}
 						logoSlider={logoSlider}
 					/>
