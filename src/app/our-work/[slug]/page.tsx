@@ -41,9 +41,13 @@ async function getWorkData() {
 	return res.json();
 }
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({
+	params,
+}: {
+	params: any;
+}): Promise<Metadata> {
 	const pageData = await fetch(
-		`${process.env.NEXT_PUBLIC_CREATIVATE_URI}/pages?slug=home&acf_format=standard`,
+		`${process.env.NEXT_PUBLIC_CREATIVATE_URI}/our-work/?slug=${params.slug}&acf_format=standard`,
 		{ next: { revalidate: 60 } }
 	).then((res) => res.json());
 

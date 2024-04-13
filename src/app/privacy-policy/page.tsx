@@ -1,10 +1,9 @@
 import DescBannerWithImage from "@/components/common/DescBannerWithImage";
-import SectionLayout from "@/templates/SectionLayout";
 import { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
 	const pageData = await fetch(
-		`${process.env.NEXT_PUBLIC_CREATIVATE_URI}/pages?slug=home&acf_format=standard`,
+		`${process.env.NEXT_PUBLIC_CREATIVATE_URI}/pages?slug=privacy-policy&acf_format=standard`,
 		{ next: { revalidate: 60 } }
 	).then((res) => res.json());
 
