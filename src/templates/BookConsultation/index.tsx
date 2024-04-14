@@ -258,13 +258,13 @@ function BookConsultation(props: any) {
 								}}>
 								<div className="flex flex-col md:flex-row flex-wrap">
 									<div className="relative w-full h-full md:max-w-[100%] mb-[50px]">
-										<p className="text-[18px] sm:text-[20px] leading-[30px] text-left text-primaryBlue mb-[25px]">1. What can we help you with ?</p>
-										<div className="grid sm:grid-cols-2 gap-4">
+										<p className="text-[18px] sm:text-[20px] leading-[30px] text-center sm:text-left text-primaryBlue mb-[25px]">1. What can we help you with ?</p>
+										<div className="grid sm:grid-cols-2 gap-[20px] sm:gap-[24px]">
 											{
 												formData.form.purpose.service_provided?.map((item: any, i: any) => (
 													<div key={i}
 														onClick={() => handleClick(item.value)}
-														className={`cursor-pointer p-[20px] rounded-[8px] w-full h-full text-[20px] leading-[24px] text-[#F4F4F4] text-center font-[400] transition-all duration-[0.2s] ease-in ${activeItems.includes(item.value) ? 'bg-primaryBlue' : 'bg-[#262849]'
+														className={`cursor-pointer p-[16px] sm:p-[20px] rounded-[8px] w-full h-full text-[20px] leading-[24px] text-[#F4F4F4] text-center font-[400] transition-all duration-[0.2s] ease-in ${activeItems.includes(item.value) ? 'bg-primaryBlue' : 'bg-[#262849]'
 															}`}>
 														{item.name}
 													</div>
@@ -273,7 +273,7 @@ function BookConsultation(props: any) {
 										</div>
 									</div>
 									<div className="relative w-full h-full md:max-w-[100%] mb-[30px]">
-										<p className="text-[18px] sm:text-[20px] leading-[30px] text-left text-primaryBlue mb-[25px]">2. About Your Project</p>
+										<p className="text-[18px] sm:text-[20px] leading-[30px] text-center sm:text-left text-primaryBlue mb-[25px]">2. About Your Project</p>
 										<Input
 											errorData={errorData?.budget ?? {}}
 											defaultValue={userData.budget}
@@ -286,7 +286,7 @@ function BookConsultation(props: any) {
 											options={formData.form.budget}
 											required={false}
 											addPlaceHolder={true}
-											className="w-full lg:max-h-[64px] transition-all duration-300 ease-in-out relative mb-[24px] md:mb-[30px]"
+											className="w-full lg:max-h-[64px] transition-all duration-300 ease-in-out relative mb-[20px] md:mb-[24px]"
 											inputClassName=""
 										/>
 										<Input
@@ -307,7 +307,7 @@ function BookConsultation(props: any) {
 									</div>
 
 									<div className="relative w-full h-full md:max-w-[100%] mb-[30px]">
-										<p className="text-[18px] sm:text-[20px] leading-[30px] text-left text-primaryBlue mb-[25px]">3. About You</p>
+										<p className="text-[18px] sm:text-[20px] leading-[30px] text-center sm:text-left text-primaryBlue mb-[25px]">3. About You</p>
 										<Input
 											errorData={errorData?.name ?? {}}
 											defaultValue={userData.name}
@@ -319,7 +319,7 @@ function BookConsultation(props: any) {
 											data={formData.form.name}
 											required={false}
 											addPlaceHolder={true}
-											className="w-full lg:max-h-[64px] transition-all duration-300 ease-in-out relative mb-[24px] md:mb-[30px]"
+											className="w-full lg:max-h-[64px] transition-all duration-300 ease-in-out relative mb-[20px] md:mb-[24px]"
 											inputClassName=""
 										/>
 
@@ -334,7 +334,7 @@ function BookConsultation(props: any) {
 											data={formData.form.email}
 											required={false}
 											addPlaceHolder={true}
-											className="w-full lg:max-h-[64px] transition-all duration-300 ease-in-out relative mb-[24px] md:mb-[30px]"
+											className="w-full lg:max-h-[64px] transition-all duration-300 ease-in-out relative mb-[20px] md:mb-[24px]"
 											inputClassName=""
 										/>
 
@@ -349,7 +349,7 @@ function BookConsultation(props: any) {
 											data={formData.form.phone_number}
 											required={false}
 											addPlaceHolder={true}
-											className="w-full lg:max-h-[64px] transition-all duration-300 ease-in-out relative mb-[24px] md:mb-[30px]"
+											className="w-full lg:max-h-[64px] transition-all duration-300 ease-in-out relative mb-[20px] md:mb-[24px]"
 											inputClassName=""
 										/>
 
@@ -364,7 +364,7 @@ function BookConsultation(props: any) {
 											data={formData.form.bussiness_name}
 											required={false}
 											addPlaceHolder={true}
-											className="w-full lg:max-h-[64px] transition-all duration-300 ease-in-out relative mb-[24px] md:mb-[30px]"
+											className="w-full lg:max-h-[64px] transition-all duration-300 ease-in-out relative mb-[20px] md:mb-[24px]"
 											inputClassName=""
 										/>
 
@@ -379,7 +379,7 @@ function BookConsultation(props: any) {
 											data={formData.form.website}
 											required={false}
 											addPlaceHolder={true}
-											className="w-full lg:max-h-[64px] transition-all duration-300 ease-in-out relative mb-[24px] md:mb-[20px]"
+											className="w-full lg:max-h-[64px] transition-all duration-300 ease-in-out relative mb-[20px] md:mb-[24px]"
 											inputClassName=""
 										/>
 										<div className="flex w-full">
@@ -395,7 +395,7 @@ function BookConsultation(props: any) {
 													</svg>
 												</div>
 											</label>
-											<p className="text-[14px] leading-[16px] text-left text-[#f4f4f4]">We're all about respecting your privacy like it's VIP status! Your personal info? It's strictly for providing you with the scoop on our services - nothing else! Want to be part of the inner circle at Creativate and snag those insider updates? Give that box a little check (don't worry, we're not about spamming - pinky swear!). Check out the Privacy Policy for the nitty-gritty details!</p>
+											<p className="text-[14px] leading-[16px] text-left text-[#f4f4f4]">We're all about respecting your privacy like it's VIP status! Your personal info? It's strictly for providing you with the scoop on our services - nothing else! Want to be part of the inner circle at Creativate and snag those insider updates? Give that box a little check (don't worry, we're not about spamming - pinky swear!). Check out the <a className="text-primaryBlue underline" href="/privacy-policy">Privacy Policy</a> for the nitty-gritty details!</p>
 										</div>
 									</div>
 								</div>
