@@ -1,0 +1,48 @@
+import DescBannerWithImage from "@/components/common/DescBannerWithImage";
+import BookConsultation from "@/templates/BookConsultation";
+import { Metadata } from "next";
+import React from "react";
+
+export async function generateMetadata(): Promise<Metadata> {
+	const pageData = await fetch(
+		`${process.env.NEXT_PUBLIC_CREATIVATE_URI}/form/?slug=book-a-consultation&acf_format=standard`,
+		{ next: { revalidate: 60 } }
+	).then((res) => res.json());
+
+	return {
+		title: pageData[0]?.acf?.metadata?.title ?? "Creativate",
+		description:
+			pageData[0]?.acf?.metadata?.description ??
+			"Creativity and innonvation for Unstoppable Growth.",
+		keywords: pageData[0]?.acf?.metadata?.keywords ?? "Creativity",
+	};
+}
+
+async function getData() {
+	const res = await fetch(
+		`${process.env.NEXT_PUBLIC_CREATIVATE_URI}/form/?slug=book-a-consultation&acf_format=standard`,
+		{ next: { revalidate: 60 } }
+	);
+
+	if (!res.ok) {
+		throw new Error("Failed to fetch data");
+	}
+
+	return res.json();
+}
+
+const OurWork = async () => {
+	const pageData = await getData();
+	const data = pageData[0].acf;
+
+	return (
+		<>
+			<div className="pt-[160px] bg-primaryDark">
+				<DescBannerWithImage data={data?.banner} />\
+				<BookConsultation />
+			</div>
+		</>
+	);
+};
+
+export default OurWork;
