@@ -37,22 +37,26 @@ const NavItems = ({
 					)}
 				</Link>
 			) : (
-				<Link
-					className={`${menuClassName}`}
-					href={`#${targetId}`}
-					data-target={targetId ? targetId : undefined}>
-					<span className={`${!ctaMenu ? "" : `shrink-0`}`}>
-						{menuText}
-					</span>
-					{!ctaMenu && (
-						<span
-							className={`h-[1px] inline-block bg-primaryLight md:bg-primaryDark absolute left-0 -bottom-0.5 w-0 group-hover:w-full transition-[width] ease duration-300 ${
-								className ? className : ""
-							}`}>
-							&nbsp;
-						</span>
+				<>
+					{pathname === "/" && (
+						<Link
+							className={`${menuClassName}`}
+							href={`#${targetId}`}
+							data-target={targetId ? targetId : undefined}>
+							<span className={`${!ctaMenu ? "" : `shrink-0`}`}>
+								{menuText}
+							</span>
+							{!ctaMenu && (
+								<span
+									className={`h-[1px] inline-block bg-primaryLight md:bg-primaryDark absolute left-0 -bottom-0.5 w-0 group-hover:w-full transition-[width] ease duration-300 ${
+										className ? className : ""
+									}`}>
+									&nbsp;
+								</span>
+							)}
+						</Link>
 					)}
-				</Link>
+				</>
 			)}
 		</>
 	);
