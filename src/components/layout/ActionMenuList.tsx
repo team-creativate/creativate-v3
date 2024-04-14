@@ -10,7 +10,7 @@ const ActionMenuList = ({ data }: any) => {
 						menuText={item.menu_label}
 						route={item.route_link}
 						targetId={item.target_id}
-						targetStripe={item.targetStripe}
+						targetStripe={item.target_stripe}
 						ctaMenu={item.cta_menu}
 					/>
 				))}

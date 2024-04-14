@@ -22,9 +22,9 @@ const NavItems = ({
 
 	return (
 		<>
-			{targetStripe ? (
+			{!targetStripe ? (
 				<Link
-					href={`#${targetId}`}
+					href={`/${route}`}
 					className={`${menuClassName}`}>
 					{menuText}
 					{!ctaMenu && (
@@ -37,8 +37,9 @@ const NavItems = ({
 					)}
 				</Link>
 			) : (
-				<p
+				<Link
 					className={`${menuClassName}`}
+					href={`#${targetId}`}
 					data-target={targetId ? targetId : undefined}>
 					<span className={`${!ctaMenu ? "" : `shrink-0`}`}>
 						{menuText}
@@ -51,7 +52,7 @@ const NavItems = ({
 							&nbsp;
 						</span>
 					)}
-				</p>
+				</Link>
 			)}
 		</>
 	);
