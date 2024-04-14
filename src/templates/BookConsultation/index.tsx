@@ -7,25 +7,10 @@ import { useForm } from "@formspree/react";
 
 const formData = {
 	"form": {
-		"purpose": {
-			"service_provided": [
-				{ "name": "Logo Design & Branding", "value": "design_branding" },
-				{ "name": "UI/UX Design", "value": "ui_ux" },
-				{ "name": "Web Development", "value": "web_dev" },
-				{ "name": "Social Media Handling", "value": "social_media" }
-			]
-		},
 		"budget": {
 			"type": "select",
 			"inputName": "budget",
-			"label": "",
-			"options": [
-				{ "name": "Select Your Budget", "value": "", "disabled": true },
-				{ "name": "Less then ₹ 50k", "value": "Less then ₹50k" },
-				{ "name": "₹50k - ₹1L", "value": "₹50k - ₹1L" },
-				{ "name": "₹1L - ₹2.5L", "value": "₹1L - ₹2.5L" },
-				{ "name": "More than ₹2.5L", "value": "More than ₹2.5L" }
-			]
+			"label": ""
 		},
 		"summary_project": {
 			"type": "textarea",
@@ -225,7 +210,7 @@ function BookConsultation(props: any) {
 			setErrorData({ ...isFomSubmit.errorData, ...updatedErrorData });
 		} else {
 			// Ready to submit the form
-			const filteredItems = formData?.form?.purpose?.service_provided.filter((item: any) => activeItems.includes(item.value));
+			const filteredItems = props?.data?.service_provided.filter((item: any) => activeItems.includes(item.value));
 			const updatedServiceProvided = filteredItems.map((item: any) => item.name);
 			userData.purpose = updatedServiceProvided.join(', '); // convert array value as string with comma seprated
 			userData.accepted_terms = isTermsChecked;
@@ -260,7 +245,7 @@ function BookConsultation(props: any) {
 										<p className="text-[18px] sm:text-[20px] leading-[30px] text-center sm:text-left text-primaryBlue mb-[25px]">1. What can we help you with ?</p>
 										<div className="grid sm:grid-cols-2 gap-[20px] sm:gap-[24px]">
 											{
-												formData.form.purpose.service_provided?.map((item: any, i: any) => (
+												props?.data?.service_provided?.map((item: any, i: any) => (
 													<div key={i}
 														onClick={() => handleClick(item.value)}
 														className={`cursor-pointer p-[16px] sm:p-[20px] rounded-[8px] w-full h-full text-[20px] leading-[24px] text-[#F4F4F4] text-center font-[400] transition-all duration-[0.2s] ease-in ${activeItems.includes(item.value) ? 'bg-primaryBlue' : 'bg-[#262849]'
@@ -282,7 +267,7 @@ function BookConsultation(props: any) {
 											editable={true}
 											dataPassToParent={disableFocus}
 											data={formData.form.budget}
-											options={formData.form.budget}
+											options={props?.data?.budget_options}
 											required={false}
 											addPlaceHolder={true}
 											className="w-full lg:max-h-[64px] transition-all duration-300 ease-in-out relative mb-[20px] md:mb-[24px]"

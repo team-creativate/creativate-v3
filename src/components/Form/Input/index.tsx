@@ -90,16 +90,21 @@ const Input = (props: any) => {
                                             handleInputData(e.target.value, props?.data?.inputName);
                                         }}
                                     >
-
-                                        {props?.options?.options.map(
-                                            (option: any, i: number) => (
+                                        <option
+                                            className='text-primaryLight'
+                                            value=""
+                                            disabled={true}
+                                        >
+                                            Select Your Budget
+                                        </option>
+                                        {props?.options?.map(
+                                            (item: any, i: number) => (
                                                 <option
                                                     key={i}
                                                     className='text-primaryLight'
-                                                    value={option.value}
-                                                    disabled={option.disabled}
+                                                    value={item.option}
                                                 >
-                                                    {option.name}
+                                                    {item.option}
                                                 </option>
                                             )
                                         )}

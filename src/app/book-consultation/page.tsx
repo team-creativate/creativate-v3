@@ -39,7 +39,7 @@ const OurWork = async () => {
 		<>
 			<div className="pt-[160px] bg-primaryDark">
 				<DescBannerWithImage data={data?.banner} />\
-				<BookConsultation />
+				<BookConsultation data={data?.book_consultation_form} />
 			</div>
 		</>
 	);
