@@ -21,9 +21,10 @@ const formData = {
 			"label": "",
 			"options": [
 				{ "name": "Select Your Budget", "value": "", "disabled": true },
-				{ "name": "10", "value": "10" },
-				{ "name": "20", "value": "20" },
-				{ "name": "30", "value": "30" }
+				{ "name": "Less then ₹ 50k", "value": "Less then ₹50k" },
+				{ "name": "₹50k - ₹1L", "value": "₹50k - ₹1L" },
+				{ "name": "₹1L - ₹2.5L", "value": "₹1L - ₹2.5L" },
+				{ "name": "More than ₹2.5L", "value": "More than ₹2.5L" }
 			]
 		},
 		"summary_project": {
@@ -228,12 +229,10 @@ function BookConsultation(props: any) {
 			const updatedServiceProvided = filteredItems.map((item: any) => item.name);
 			userData.purpose = updatedServiceProvided.join(', '); // convert array value as string with comma seprated
 			userData.accepted_terms = isTermsChecked;
-			console.log(userData)
 			if (!isSubmitting) {
 				setLoader(true)
 				setIsSubmitting(true);
 				sendMail(userData)
-				// sendToCloud(userData);
 			}
 		}
 	};
