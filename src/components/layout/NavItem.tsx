@@ -24,7 +24,7 @@ const NavItems = ({
 		<>
 			{!targetStripe ? (
 				<Link
-					href={`/${route}`}
+					href={`${route}`}
 					className={`${menuClassName}`}>
 					{menuText}
 					{!ctaMenu && (
