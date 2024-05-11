@@ -112,12 +112,11 @@ const VerticalTabSliderStripe = ({ data, sectionId }: any) => {
 	// 	StickySlider();
 	// }, [isResize]);
 
-	const tabTitleStyles = `text-primaryLight cursor-pointer font-[500] text-[24px] leading-[28px] text-left transition-[padding] duration-300 ease-in-out mb-[8px]`;
+	const tabTitleStyles = `text-primaryLight cursor-pointer font-[500] text-[24px] leading-[28px] text-left transition-[padding] duration-300 ease-in-out`;
 	const tabDescStyles = `text-primaryLight font-normal text-[16px] leading-[20px] lg:text-[20px] lg:leading-[24px]`;
 
 	return (
-		<section
-			className={`py-[50px] xl:py-[120px] 2xl:pt-[75px] 2xl:pb-[155px] bg-primaryDark relative`}>
+		<section className={`py-[50px] pb-[25px] xl:py-[120px] bg-primaryDark relative`}>
 			{sectionId && (
 				<span
 					id={sectionId}
@@ -131,7 +130,7 @@ const VerticalTabSliderStripe = ({ data, sectionId }: any) => {
 						<>
 							<div
 								ref={targetRef}
-								className={`shrink-0 md:w-[48%] md:max-w-[600px] h-full max-h-[780px] relative overflow-hidden`}>
+								className={`shrink-0 md:w-[48%] md:max-w-[600px] h-full max-h-[780px] relative overflow-hidden rounded-[20px]`}>
 								<Slider
 									className={`tabSlider`}
 									ref={sliderRef}
@@ -227,7 +226,7 @@ const VerticalTabSliderStripe = ({ data, sectionId }: any) => {
 															: ""
 													}${
 														selected === index
-															? "active bg-primaryBlue rounded-[8px] px-[40px] py-[32px] md:px-[32px] md:py-[24px]"
+															? "active bg-primaryBlue rounded-[8px] px-[40px] py-[32px] md:px-[32px] md:py-[24px] flex flex-col gap-[8px]"
 															: "px-[30px] border-b border-primaryLight/30 py-[20px]"
 													}`}
 													onClick={() => {
@@ -343,7 +342,7 @@ const VerticalTabSliderStripe = ({ data, sectionId }: any) => {
 														: ""
 												} ${
 													selected === index
-														? "active bg-primaryBlue rounded-[8px] px-[40px] py-[32px] md:px-[32px] md:py-[24px]"
+														? "active bg-primaryBlue rounded-[8px] px-[40px] py-[32px] md:px-[32px] md:py-[24px] flex flex-col gap-[8px]"
 														: "px-[30px] border-b border-primaryLight/30 py-[20px]"
 												}`}
 												onClick={() => {

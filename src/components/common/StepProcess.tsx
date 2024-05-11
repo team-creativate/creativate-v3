@@ -40,11 +40,11 @@ const StepProcess = ({ data, sectionId }: any) => {
 					}`}
 				/>
 				<h4
-					className={`font-[400] text-primaryLight text-center text-[32px] leading-[38px] mb-[16px] lg:mb-[20px]`}>
+					className={`font-[400] text-primaryLight text-center text-[28px] leading-[34px] lg:text-[32px] lg:leading-[38px] mb-[16px] lg:mb-[20px]`}>
 					{data?.title}
 				</h4>
 				<p
-					className={`text-primaryLight font-normal text-[20px] leading-[24px] text-center`}>
+					className={`text-primaryLight font-normal text-[18px] leading-[22px] lg:text-[20px] lg:leading-[24px] text-center`}>
 					{data?.description}
 				</p>
 			</div>
@@ -53,7 +53,7 @@ const StepProcess = ({ data, sectionId }: any) => {
 
 	return (
 		<section
-			className={`pt-[25px] pb-[25px] lg:pb-[100px] bg-primaryDark relative`}>
+			className={`py-[15px] pb-[40px] lg:pt-0 lg:pb-[120px] bg-primaryDark relative`}>
 			{sectionId && (
 				<span
 					id={sectionId}

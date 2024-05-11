@@ -53,7 +53,7 @@ const OurWork = async () => {
 
 	return (
 		<>
-			<div className="pt-[160px] bg-primaryDark">
+			<div className="pt-[106px] lg:pt-[160px] bg-primaryDark">
 				<DescBannerWithImage data={data?.banner} />
 				<OurWorkList data={workList} />
 			</div>

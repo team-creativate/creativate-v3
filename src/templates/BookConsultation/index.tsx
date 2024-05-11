@@ -46,14 +46,14 @@ const formData = {
 		bussiness_name: {
 			type: "input",
 			inputName: "bussiness_name",
-			placeholder: "Bussiness Name",
+			placeholder: "Bussiness Name (optional)",
 			required: false,
 			className: "bussiness-name",
 		},
 		website: {
 			type: "input",
 			inputName: "website",
-			placeholder: "Website",
+			placeholder: "Website (optional)",
 			required: false,
 			className: "website",
 		},

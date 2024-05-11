@@ -81,7 +81,7 @@ const Input = (props: any) => {
                                 {(props?.data?.label) && (<label htmlFor={props?.data?.inputName} className={`block text-[18px] sm:text-[20px] leading-[30px] text-left text-[#F4F4F4] mb-[15px] ${(props?.data?.required || props?.required) && "after:content-['*'] after:text-[#dd0735] after:pl-[3px]"}`}>{props?.data?.label}</label>)}
                                 <div className={`relative`}>
                                     <select
-                                        className={`bg-[#262849] p-[16px] sm:p-[20px] rounded-[8px] w-full h-full text-[20px] leading-[24px] text-primaryLight font-[400] placeholder:text-[#F4F4F4] appearance-none transition-all duration-[0.2s] ease-in focus:!outline-offset-0 focus:!outline-0 focus:!shadow-none focus:border-[#F4F4F4] focus-visible:outline-[0px] relative z-1 cursor-pointer text-[#F4F4F4] bg-[#191B35]`}
+                                        className={`bg-[#262849] p-[16px] sm:p-[20px] rounded-[8px] w-full h-full text-[20px] leading-[24px] text-primaryLight font-[400] placeholder:text-[#F4F4F4] appearance-none transition-all duration-[0.2s] ease-in focus:!outline-offset-0 focus:!outline-0 focus:!shadow-none focus:border-[#F4F4F4] focus-visible:outline-[0px] relative z-1 cursor-pointer budget_list`}
                                         value={inputVal}
                                         id={props?.data?.inputName}
                                         name={props?.data?.inputName}

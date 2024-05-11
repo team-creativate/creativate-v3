@@ -25,7 +25,7 @@ const Header = async () => {
 			<div className="w-[88%] max-w-[1280px] mx-auto flex items-center justify-between h-full">
 				<div className="flex items-center justify-between">
 					<Logo />
-					<nav className="hidden lg:flex items-center justify-end">
+					<div className="hidden lg:flex items-center justify-end">
 						{data?.header_left_menu.length > 0 &&
 							data?.header_left_menu.map((item: any) => (
 								<NavItems
@@ -37,11 +37,11 @@ const Header = async () => {
 									ctaMenu={item.cta_menu}
 								/>
 							))}
-					</nav>
+					</div>
 				</div>
 
 				<div className="block lg:hidden">
-					<MobileNav menuList={data?.header_left_menu} />
+					<MobileNav menuList={data?.header_left_menu} actionList={data?.header_right_menu} />
 				</div>
 
 				<div className={`hidden lg:block`}>

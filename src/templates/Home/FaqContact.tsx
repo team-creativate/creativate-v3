@@ -17,7 +17,7 @@ const FaqContact = ({
 			{sectionId && (
 				<span
 					id={sectionId}
-					className="targetCode"
+					className="targetCode top-[-45px]"
 				/>
 			)}
 			<div

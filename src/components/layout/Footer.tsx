@@ -35,6 +35,7 @@ const Footer = async () => {
 								targetId={item.target_id}
 								targetStripe={item.target_stripe}
 								ctaMenu={item.cta_menu}
+								footer={true}
 							/>
 						))}
 					</div>
@@ -45,6 +46,7 @@ const Footer = async () => {
 							<Link
 								key={index}
 								href={`${item?.link}`}
+								target="_blank"
 								className="max-w-[42px] max-h-[42px] md:max-w-[30px] md:max-h-[30px]">
 								<ImageLoader
 									src={item?.icon}

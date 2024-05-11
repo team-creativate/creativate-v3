@@ -48,13 +48,13 @@ const HomeBanner = ({ data, logoSlider }: { data: any; logoSlider: any }) => {
 						</Link>
 					</AnimateInView>
 					<div className="h-[46px] relative mb-[40px] lg:mb-0">
-						<span className="h-[45px] w-[50px] absolute left-[-18px] top-0 blur-lg z-[1] logoSliderShade left" />
+						<span className="h-[45px] w-[50px] absolute left-[-4px] top-0 blur-[2px] z-[1] logoSliderShade left" />
 						<LogoSlider
 							desktopView={4}
-							mobileView={2}
+							mobileView={4}
 							logoSlider={logoSlider}
 						/>
-						<span className="h-[45px] w-[50px] absolute right-[-18px] top-0 blur-lg z-[1] logoSliderShade right" />
+						<span className="h-[45px] w-[50px] absolute right-[-4px] top-0 blur-[2px] z-[1] logoSliderShade right" />
 						<span />
 					</div>
 				</div>

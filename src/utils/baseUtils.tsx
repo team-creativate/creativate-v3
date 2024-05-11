@@ -9,7 +9,7 @@ export class FormUtils {
     handleCommonErrors(errorType: any, type = '') {
         if (errorType == 'this_field_is_required') {
             return this.bringErrorMessage(
-                'This is required field'
+                "Fill or spill! This field's a must."
             );
         } else if (errorType == 'this_field_cant_be_empty') {
             return this.bringErrorMessage(
@@ -17,11 +17,11 @@ export class FormUtils {
             );
         } else if (errorType == 'please_enter_your_email') {
             return this.bringErrorMessage(
-                'Please enter your email!'
+                'Double-check that email, please!'
             );
         } else if (errorType == 'invalid_email_format') {
             return this.bringErrorMessage(
-                'Invalid email format'
+                'Double-check that email, please!'
             );
         } else if (errorType == 'phone_number_is_not_valid') {
             return this.bringErrorMessage(
@@ -33,7 +33,7 @@ export class FormUtils {
             );
         } else if (errorType == 'invalid_email_address') {
             return this.bringErrorMessage(
-                'Invalid email address'
+                'Double-check that email, please!'
             );
         } else if (errorType == 'cannot_start_or_end_with_hyphen') {
             return this.bringErrorMessage(
@@ -93,7 +93,7 @@ export class FormUtils {
                     const words = formFieldValue.split(/\s+/);
                     const count = words.filter((word: any) => word !== '').length;
                     if(count <= 50 ) {
-                        errorValue = 'Please describe more';
+                        errorValue = "50 words, please! Let's not skimp on the details.";
                         countError += 1;
                         retrnData.errorData[passFormField[val]] = errorValue;
                         retrnData.errorData['deleteKey'] = passFormField[val];

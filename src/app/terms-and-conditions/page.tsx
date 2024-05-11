@@ -34,10 +34,10 @@ const PrivacyPolicy = async () => {
 
 	return (
 		<>
-			<div className="pt-[160px] bg-primaryDark">
+			<div className="pt-[106px] lg:pt-[160px] bg-primaryDark">
 				<DescBannerWithImage data={data?.banner} />
 				<div
-					className="blog-details py-[60px] md:pb-[100px] max-w-[1000px] mx-auto"
+					className="blog-details w-[88%] py-[60px] md:pb-[100px] max-w-[1000px] mx-auto"
 					dangerouslySetInnerHTML={{
 						__html: pageData[0]?.content?.rendered,
 					}}

@@ -2,7 +2,7 @@ import NavItems from "./NavItem";
 
 const ActionMenuList = ({ data }: any) => {
 	return (
-		<div className="flex flex-col md:flex-row items-center justify-center">
+		<nav className="flex flex-col md:flex-row items-center justify-center">
 			{data?.length > 0 &&
 				data?.map((item: any) => (
 					<NavItems
@@ -14,7 +14,7 @@ const ActionMenuList = ({ data }: any) => {
 						ctaMenu={item.cta_menu}
 					/>
 				))}
-		</div>
+		</nav>
 	);
 };
 

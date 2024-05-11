@@ -49,11 +49,10 @@ export default async function Home() {
 			<CultureParalax data={data?.our_culture} />
 			<VerticalTabSliderStripe
 				data={data?.what_we_do}
-				sectionId={"work"}
+				sectionId={"services"}
 			/>
 			<StepProcess
 				data={data?.our_3_step_process}
-				sectionId={"service"}
 			/>
 			<CustomerStories
 				data={data?.client_feedback}
@@ -64,7 +63,7 @@ export default async function Home() {
 				sectionId={"contact-us"}
 				questionsList={data?.frequent_questions}
 				contactForm={data?.contact_form}
-				social_links={data?.social_links}
+				social_links={data?.social_link_list}
 			/>
 		</>
 	);

@@ -5,6 +5,8 @@ export type NavItemsParams = {
     targetStripe?: Boolean,
     ctaMenu?: Boolean,
     className?: String
+    handleClick?: any;
+    footer?: Boolean;
 }
 
 export type SectionLayoutParams = {

@@ -12,7 +12,7 @@ const CustomerStoryCard: React.FC<CustomerStoryCardProps> = ({
 }) => {
 	return (
 		<div className="bg-primaryLight px-[16px] py-[32px] lg:px-[40px] lg:py-[32px] md:min-h-[240px] max-w-[450px] mx-auto lg:max-w-full flex flex-col justify-between rounded-[16px] md:mx-[10px]">
-			<p className="text-[20px] leading-[24px] text-primaryDark font-[400] text-left transition-all duration-300 ease-in-out mb-[16px] md:mb-[32px] line-clamp-3">
+			<p className="text-[16px] leading-[24px] lg:text-[20px] font-poppins text-primaryDark font-[400] text-left transition-all duration-300 ease-in-out mb-[56px] md:mb-[32px] line-clamp-5">
 				{content}
 			</p>
 			<div className="flex items-start flex-col lg:items-center lg:flex-row justify-between w-full">

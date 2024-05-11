@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const LogoSlider = ({ desktopView, mobileView, logoSlider }: any) => {
+const LogoSlider = ({ desktopView, mobileView, logoSlider, customerStories }: any) => {
 	const settings = {
 		dots: false,
 		arrows: false,
@@ -34,7 +34,7 @@ const LogoSlider = ({ desktopView, mobileView, logoSlider }: any) => {
 					{logoSlider.map((item: any, i: number) => (
 						<div
 							key={i}
-							className={`w-full relative !inline-flex items-center justify-center h-[46px]`}>
+							className={`${customerStories ? 'lg:w-full' : '!w-[80px] lg:!w-full'} relative !inline-flex items-center justify-center h-[36px] lg:h-[46px]`}>
 							<ImageLoader
 								key={i}
 								src={item.logo}

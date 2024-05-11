@@ -69,7 +69,7 @@ const CustomerStories = ({ data, sectionId, logoSlider }: any) => {
 
 	return (
 		<section
-			className={`py-[50px] lg:py-[40px] xl:py-[100px] bg-primaryBlue relative`}>
+			className={`py-[40px] xl:py-[100px] bg-primaryBlue relative`}>
 			{sectionId && (
 				<span
 					id={sectionId}
@@ -131,11 +131,12 @@ const CustomerStories = ({ data, sectionId, logoSlider }: any) => {
 							/>
 						))}
 				</Slider>
-				<div className="h-[46px] relative mt-[40px]">
+				<div className="h-[46px] relative mt-[20px] opacity-50">
 					<LogoSlider
-						desktopView={7}
+						desktopView={6}
 						mobileView={2}
 						logoSlider={logoSlider}
+						customerStories={true}
 					/>
 					<span />
 				</div>
