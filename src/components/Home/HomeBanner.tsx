@@ -51,7 +51,7 @@ const HomeBanner = ({ data, logoSlider }: { data: any; logoSlider: any }) => {
 						<span className="h-[45px] w-[50px] absolute left-[-4px] top-0 blur-[2px] z-[1] logoSliderShade left" />
 						<LogoSlider
 							desktopView={4}
-							mobileView={4}
+							mobileView={3}
 							logoSlider={logoSlider}
 						/>
 						<span className="h-[45px] w-[50px] absolute right-[-4px] top-0 blur-[2px] z-[1] logoSliderShade right" />
