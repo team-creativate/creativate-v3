@@ -163,6 +163,11 @@ header nav a, .font-poppins {
 		transform: rotateY(0deg) translate(8%, 8%);
 		opacity: 0.6;
 	}
+	.stack-card__item[data-position="3"] {
+		z-index: 1;
+		transform: rotateY(0deg) translate(4%, 4%);
+		opacity: 0.6;
+	}
 	@media screen and (max-width: 1023.98px) {
 		transform: rotateY(0deg) translate(0, -4%);
 		.stack-card__item[data-position="1"] {
@@ -170,6 +175,9 @@ header nav a, .font-poppins {
 		}
 		.stack-card__item[data-position="2"] {
 			transform: rotateY(0deg) translate(4%, 0%);
+		}
+		.stack-card__item[data-position="3"] {
+			transform: rotateY(0deg) translate(8%, -4%);
 		}
 	}
 }
