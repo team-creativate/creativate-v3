@@ -6,28 +6,17 @@ import useMediaQuery from "@/utils/hooks/useMediaQuery";
 import ImageLoader from "@/utils/ImageLoader";
 import Link from "next/link";
 import Slider from "react-slick";
-import AnimateInView from "@/templates/animateInView";
 import SectionTitle from "./SectionTitle";
 
 const SectionHead = ({ title, description }: any) => {
 	return (
 		<div className="px-[25px] lg:px-0 pb-[30px]">
-			<AnimateInView
-				reset={false}
-				animation={"translateFromBottom"}
-				delay={0.2}>
-				<SectionTitle className={`text-primaryLight mb-[20px]`}>
-					{title}
-				</SectionTitle>
-			</AnimateInView>
-			<AnimateInView
-				reset={false}
-				animation={"translateFromBottom"}
-				delay={0.4}>
-				<p className="text-[20px] leading-[24px] md:text-[16px] md:leading-[20px] 2xl:text-[20px] 2xl:leading-[24px] text-center text-primaryLight font-[400] md:text-left opacity-50">
-					{description}
-				</p>
-			</AnimateInView>
+			<SectionTitle className={`text-primaryLight mb-[20px]`}>
+				{title}
+			</SectionTitle>
+			<p className="text-[20px] leading-[24px] md:text-[16px] md:leading-[20px] 2xl:text-[20px] 2xl:leading-[24px] text-center text-primaryLight font-[400] md:text-left opacity-50">
+				{description}
+			</p>
 		</div>
 	);
 };
@@ -116,7 +105,8 @@ const VerticalTabSliderStripe = ({ data, sectionId }: any) => {
 	const tabDescStyles = `text-primaryLight font-normal text-[16px] leading-[20px] lg:text-[20px] lg:leading-[24px]`;
 
 	return (
-		<section className={`py-[50px] pb-[25px] xl:py-[120px] bg-primaryDark relative`}>
+		<section
+			className={`py-[50px] pb-[25px] xl:py-[120px] bg-primaryDark relative`}>
 			{sectionId && (
 				<span
 					id={sectionId}
