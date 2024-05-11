@@ -12,7 +12,7 @@ const CustomerStoryCard: React.FC<CustomerStoryCardProps> = ({
 }) => {
 	return (
 		<div className="bg-primaryLight px-[16px] py-[32px] lg:px-[40px] lg:py-[32px] md:min-h-[240px] max-w-[450px] mx-auto lg:max-w-full flex flex-col justify-between rounded-[16px] md:mx-[10px]">
-			<p className="text-[16px] leading-[24px] lg:text-[20px] font-poppins text-primaryDark font-[400] text-left transition-all duration-300 ease-in-out mb-[56px] md:mb-[32px] line-clamp-5">
+			<p className="text-[16px] leading-[24px] lg:text-[20px] text-primaryDark font-[400] text-left transition-all duration-300 ease-in-out mb-[56px] md:mb-[32px] line-clamp-5">
 				{content}
 			</p>
 			<div className="flex items-start flex-col lg:items-center lg:flex-row justify-between w-full">
@@ -36,11 +36,12 @@ const CustomerStoryCard: React.FC<CustomerStoryCardProps> = ({
 						</p>
 					</div>
 				</div>
-				<div className="w-[155px] h-[30px] 2xl:w-[205px] 2xl:h-[40px] max-lg:mt-[20px] relative">
+				<div className="max-lg:mt-[20px] relative">
 					<ImageLoader
 						src={logo}
-						fill
-						className={`object-contain`}
+						height={155}
+						width={205}
+						className={`object-contain w-auto max-w-[205px] max-h-[40px]`}
 						alt={logoAlt ? logoAlt : "Company logo"}
 					/>
 				</div>

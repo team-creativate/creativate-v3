@@ -56,7 +56,7 @@ const FaqList: React.FC<faqProps> = ({ title, desc, faqList, className }) => {
 							className={`text-primaryLight cursor-pointer font-[500] text-[20px] leading-[28px] text-left transition-[padding] duration-300 ease-in-out mb-[8px] relative flex items-start justify-between`}>
 							<p className="w-[90%]">{item?.question}</p>
 							<span
-								className={`w-[18px] h-[18px] 2xl:w-[28px] 2xl:h-[28px] relative top-[8px]`}>
+								className={`w-[18px] h-[18px] relative top-[8px]`}>
 								<span className="absolute bg-primaryLight border-solid border-primaryLight top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[1px] transition-all duration-300 ease-linear"></span>
 								<span className="absolute bg-primaryLight border-solid border-primaryLight top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[1px] rotate-90 group-[.active]:rotate-0 origin-center transition-all duration-300 ease-linear"></span>
 							</span>
