@@ -68,8 +68,7 @@ const CustomerStories = ({ data, sectionId, logoSlider }: any) => {
 	};
 
 	return (
-		<section
-			className={`py-[40px] xl:py-[100px] bg-primaryBlue relative`}>
+		<section className={`py-[40px] xl:py-[100px] bg-primaryBlue relative`}>
 			{sectionId && (
 				<span
 					id={sectionId}
@@ -79,41 +78,26 @@ const CustomerStories = ({ data, sectionId, logoSlider }: any) => {
 			<SectionLayout
 				className={`flex flex-col lg:flex-row justify-between`}>
 				<div className="w-full max-md:max-w-[350px] max-md:mx-auto lg:w-1/2 lg:max-w-[555px] text-center mb-[16px] md:mb-[32px] lg:mb-0 lg:flex lg:flex-col justify-between">
-					<AnimateInView
-						reset={false}
-						animation={"translateFromBottom"}
-						delay={0.2}>
-						<SectionTitle className={`text-primaryLight`}>
-							{data?.title}
-						</SectionTitle>
-					</AnimateInView>
+					<SectionTitle className={`text-primaryLight`}>
+						{data?.title}
+					</SectionTitle>
 				</div>
 				<div className="w-full max-md:max-w-[350px] max-lg:max-w-[600px] max-lg:mx-auto lg:w-1/2">
-					<AnimateInView
-						reset={false}
-						animation={"translateFromBottom"}
-						delay={0.4}>
-						<p className="text-[20px] leading-[24px] text-primaryLight font-[400] text-center lg:text-[24px] lg:leading-[28px] lg:text-right">
-							{data?.description}
-						</p>
-					</AnimateInView>
-					<AnimateInView
-						reset={false}
-						animation={"translateFromBottom"}
-						delay={0.6}>
-						<Link
-							href={data?.button_link}
-							className="text-[20px] leading-[24px] text-primaryLight font-[400] text-center lg:text-426px] lg:leading-282px] lg:text-right mt-[10px] lg:mt-[16px] flex items-center justify-center lg:justify-end underline transition-all duration-300 ease-linear">
-							{data?.button_text}
-							<ImageLoader
-								src={"./icons/external-link.svg"}
-								alt="external link"
-								width={8}
-								height={8}
-								className="ml-[8px] md:w-[12px] md:h-[12px]"
-							/>
-						</Link>
-					</AnimateInView>
+					<p className="text-[20px] leading-[24px] text-primaryLight font-[400] text-center lg:text-[24px] lg:leading-[28px] lg:text-right">
+						{data?.description}
+					</p>
+					<Link
+						href={data?.button_link}
+						className="text-[20px] leading-[24px] text-primaryLight font-[400] text-center lg:text-426px] lg:leading-282px] lg:text-right mt-[10px] lg:mt-[16px] flex items-center justify-center lg:justify-end underline transition-all duration-300 ease-linear">
+						{data?.button_text}
+						<ImageLoader
+							src={"./icons/external-link.svg"}
+							alt="external link"
+							width={8}
+							height={8}
+							className="ml-[8px] md:w-[12px] md:h-[12px]"
+						/>
+					</Link>
 				</div>
 			</SectionLayout>
 			<SectionLayout className={`customer-stories mt-[40px]`}>
