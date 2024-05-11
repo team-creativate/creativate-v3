@@ -5,7 +5,7 @@ const Logo = () => {
 	return (
 		<Link
 			href={'/'}
-			className="flex items-center justify-center md:mr-[25px] xl:mr-[45px] 2xl:mr-[55px] transition-all duration-300 ease-in-out">
+			className="flex items-center justify-center md:mr-[25px] xl:mr-[45px] 2xl:mr-[55px] transition-all duration-300 ease-in-out z-[99]">
 			<ImageLoader
 				src={"/images/logo.svg"}
 				width={163}

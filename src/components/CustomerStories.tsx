@@ -20,7 +20,7 @@ const CustomerStories = ({ data, sectionId, logoSlider }: any) => {
 				onClick={onClick}>
 				<ImageLoader
 					src="./icons/slider-arrow-icon.svg"
-					alt="logo"
+					alt="arrow icon"
 					className="z-[1]"
 					width={16}
 					height={14}
@@ -37,7 +37,7 @@ const CustomerStories = ({ data, sectionId, logoSlider }: any) => {
 				onClick={onClick}>
 				<ImageLoader
 					src="./icons/slider-arrow-icon.svg"
-					alt="logo"
+					alt="arrow icon"
 					className="z-[1]"
 					width={16}
 					height={14}
