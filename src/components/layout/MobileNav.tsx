@@ -40,7 +40,7 @@ const MobileNav = ({ menuList, actionList }: any) => {
 					<motion.div
 						initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
 						animate={{ scale: 1, opacity: 1 }}
-						className="max-w-[350px] w-full flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[10] bg-primaryDark/20 rounded-lg backdrop-blur-md py-8 px-[5px] gap-y-[150px]">
+						className="max-w-[450px] max-h-[75vh] overflow-y-scroll w-full flex flex-col justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[10] bg-primaryDark/20 rounded-lg backdrop-blur-md py-8 px-[5px] gap-y-[100px]">
 						<nav className="flex items-center flex-col justify-center w-full">
 							{menuList.length > 0 &&
 								menuList.map((item: any) => (
