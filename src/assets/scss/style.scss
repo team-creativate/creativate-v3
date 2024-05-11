@@ -155,17 +155,17 @@ h6,
 	}
 	.stack-card__item[data-position="1"] {
 		z-index: 3;
-		transform: rotateY(0deg) translate(0px, 16%) !important;
+		transform: rotateY(0deg) translate(0px, 6%) !important;
 		opacity: 1;
 	}
 	.stack-card__item[data-position="2"] {
 		z-index: 1;
-		transform: rotateY(0deg) translate(8%, 8%);
+		transform: rotateY(0deg) translate(6%, 0%);
 		opacity: 0.6;
 	}
 	.stack-card__item[data-position="3"] {
 		z-index: 1;
-		transform: rotateY(0deg) translate(4%, 4%);
+		transform: rotateY(0deg) translate(12%, -6%);
 		opacity: 0.6;
 	}
 	@media screen and (max-width: 1023.98px) {

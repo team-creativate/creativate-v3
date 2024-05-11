@@ -216,7 +216,7 @@ const VerticalTabSliderStripe = ({ data, sectionId }: any) => {
 															: ""
 													}${
 														selected === index
-															? "active bg-primaryBlue rounded-[8px] px-[40px] py-[32px] md:px-[32px] md:py-[24px] flex flex-col gap-[8px]"
+															? "active bg-primaryBlue rounded-[8px] px-[20px] py-[28px] md:px-[32px] md:py-[24px] flex flex-col gap-[8px]"
 															: "px-[30px] border-b border-primaryLight/30 py-[20px]"
 													}`}
 													onClick={() => {
@@ -332,7 +332,7 @@ const VerticalTabSliderStripe = ({ data, sectionId }: any) => {
 														: ""
 												} ${
 													selected === index
-														? "active bg-primaryBlue rounded-[8px] px-[40px] py-[32px] md:px-[32px] md:py-[24px] flex flex-col gap-[8px]"
+														? "active bg-primaryBlue rounded-[8px] px-[20px] py-[28px] md:px-[32px] md:py-[24px] flex flex-col gap-[8px]"
 														: "px-[30px] border-b border-primaryLight/30 py-[20px]"
 												}`}
 												onClick={() => {

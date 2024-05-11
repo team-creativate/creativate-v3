@@ -29,7 +29,7 @@ const NavItems = ({
 
 	const menuClassName = `${
 		pathname === extractPathFromUrl(route)
-			? "active bg-[#161830] rounded-[4px]"
+			? "active max-lg:bg-[#161830] rounded-[4px]"
 			: ""
 	} group cursor-pointer tracking-wide ${
 		!ctaMenu
