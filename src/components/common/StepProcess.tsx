@@ -1,7 +1,6 @@
 import SectionLayout from "@/templates/SectionLayout";
 import SectionTitle from "@/components/common/SectionTitle";
 import React from "react";
-import AnimateInView from "@/templates/animateInView";
 
 const GridBgGradient = [
 	"bg-[linear-gradient(91.94deg,#336CFB_0%,#11C3C1_100%)]",
@@ -62,25 +61,17 @@ const StepProcess = ({ data, sectionId }: any) => {
 			)}
 			<SectionLayout className={``}>
 				<div className={`mx-auto max-w-[450px] lg:max-w-[750px]`}>
-					<AnimateInView
-						reset={false}
-						animation={"translateFromBottom"}
-						delay={0.2}>
-						<SectionTitle
-							className={`text-primaryLight !text-center mb-[30px] 2xl:mb-[40px]`}>
-							{data?.title}
-						</SectionTitle>
-					</AnimateInView>
+					<SectionTitle
+						className={`text-primaryLight !text-center mb-[30px] 2xl:mb-[40px]`}>
+						{data?.title}
+					</SectionTitle>
 				</div>
 				{Object.values(processItems)?.length > 0 && (
 					<div
 						className={`testing flex flex-col md:flex-row md:flex-wrap justify-between`}>
 						{Object.values(processItems).map(
 							(item: any, index: number) => (
-								<AnimateInView
-									reset={false}
-									animation={"translateFromBottom"}
-									delay={index * 0.2}
+								<div
 									key={index}
 									className={`w-full max-md:max-w-[350px] md:w-[calc((100%_/_2)_-_20px)] max-lg:mx-auto lg:w-[calc((100%_/_3)_-_20px)]`}>
 									<ProcessGrid
@@ -88,7 +79,7 @@ const StepProcess = ({ data, sectionId }: any) => {
 										bgGradient={GridBgGradient[index]}
 										animateDelay={index}
 									/>
-								</AnimateInView>
+								</div>
 							)
 						)}
 					</div>
