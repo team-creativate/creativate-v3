@@ -49,7 +49,7 @@ export default async function Home() {
 			<CultureParalax data={data?.our_culture} />
 			<VerticalTabSliderStripe
 				data={data?.what_we_do}
-				sectionId={"services"}
+				sectionId={"service"}
 			/>
 			<StepProcess
 				data={data?.our_3_step_process}
