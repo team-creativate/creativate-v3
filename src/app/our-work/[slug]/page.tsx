@@ -70,7 +70,7 @@ const WorkDetails = async ({ params }: { params: { slug: string } }) => {
 		.slice(0, 2);
 
 	return (
-		<div className="pt-[100px] md:pt-[160px] md:pb-[100px] bg-primaryDark">
+		<div className="pt-[100px] pb-[40px] md:pt-[160px] md:pb-[100px] bg-primaryDark">
 			<SectionLayout>
 				<WorkDetailsBanner
 					title={data?.title?.rendered}
