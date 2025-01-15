@@ -33,7 +33,7 @@ async function getData() {
 
 async function getWorkData() {
 	const res = await fetch(
-		`${process.env.NEXT_PUBLIC_CREATIVATE_URI}/our-work?&acf_format=standard`,
+		`${process.env.NEXT_PUBLIC_CREATIVATE_URI}/our-work?&acf_format=standard&per_page=100`,
 		{ next: { revalidate: 60 } }
 	);
 

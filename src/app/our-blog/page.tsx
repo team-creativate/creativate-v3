@@ -18,7 +18,7 @@ async function getData() {
 
 async function getBlogData() {
 	const res = await fetch(
-		`${process.env.NEXT_PUBLIC_CREATIVATE_URI}/our-blog?&acf_format=standard`,
+		`${process.env.NEXT_PUBLIC_CREATIVATE_URI}/our-blog?&acf_format=standard&per_page=100`,
 		{ next: { revalidate: 60 } }
 	);
 
@@ -52,6 +52,7 @@ const OurBlog = async () => {
 
 	const blogData = await getBlogData();
 	const blogList = blogData;
+	console.log('blogList', blogList.length);
 
 	return (
 		<>
