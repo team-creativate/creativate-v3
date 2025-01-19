@@ -17,9 +17,9 @@ const formData = {
 		summary_project: {
 			type: "textarea",
 			inputName: "summary_project",
-			placeholder: "Summary Project *",
+			placeholder: "Summarize Project *",
 			required: true,
-			className: "summarize-project",
+			className: "summary-project",
 		},
 		name: {
 			type: "input",
