@@ -19,7 +19,7 @@ const formData = {
 			inputName: "summary_project",
 			placeholder: "Summary Project *",
 			required: true,
-			className: "summary-project",
+			className: "summarize-project",
 		},
 		name: {
 			type: "input",
